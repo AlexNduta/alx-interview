@@ -9,13 +9,18 @@
 
 def pascal_triangle(n):
     """
-    - The function should take an interger that represts the size of the array
-    - we should  firt chaeck if the interger passed is greater than 0 which means that the array is invalid
+    - The function should take an interger that represts the size
+    of the array
+    - we should  firt chaeck if the interger passed is greater than 0
+    which means that the array is invalid
     - We then loop through the array
-    - In every loop, we create a temporary loop which is the array being looped though but with zeros amended on both ends
-    - Also create an empty arrsy that will represent what to return eventualy
+    - In every loop, we create a temporary loop which is the array
+    being looped though but with zeros amended on both ends
+    - Also create an empty arrsy that will represent what
+    to return eventualy
    - We then loop though the temporary array
-   - we add the first two adjacent digits will will give us the value of the item above it
+   - we add the first two adjacent digits will will
+   give us the value of the item above it
 
     """
     result = [[1]]
