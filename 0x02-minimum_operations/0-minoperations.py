@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-
+""" module doc"""
 def minOperations(n):
+    """" function documetation """
     if n == 1:
         return 0
     operations = float('inf')  # Initialize operations to positive infinity
