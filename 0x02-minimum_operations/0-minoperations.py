@@ -1,9 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 def minOperations(n):
     if n == 1:
         return 0
-    
     operations = float('inf')  # Initialize operations to positive infinity
 
     # Iterate from 1 to n // 2 (inclusive) to find possible factors
@@ -12,9 +11,3 @@ def minOperations(n):
             operations = min(operations, minOperations(i) + n // i)
 
     return operations
-
-# Example usage:
-
-print(minOperations(9))
-print(minOperations(4))
-print(minOperations(12))  # Output: 6
