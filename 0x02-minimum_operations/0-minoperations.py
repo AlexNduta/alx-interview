@@ -1,15 +1,20 @@
 #!/usr/bin/env python3
 
 def minOperations(n):
-    operations = 0 # number of operations to carry out
-    current_Length = 1 # length of the element, initially 1
-    # loop through till the length is 0
-    while current_Length < n:
-        # if the value of n is a multiple of add onne to operations
-        if n % current_Length == 0:
-            operations = operations + 1 #  copyAll
-            current_Length = current_Length * 2 # paste operation
-        else:
-            operations = operations + 2
-            current_Length = current_Length + current_Length
+    if n == 1:
+        return 0
+    
+    operations = float('inf')  # Initialize operations to positive infinity
+
+    # Iterate from 1 to n // 2 (inclusive) to find possible factors
+    for i in range(1, n // 2 + 1):
+        if n % i == 0:
+            operations = min(operations, minOperations(i) + n // i)
+
     return operations
+
+# Example usage:
+
+print(minOperations(9))
+print(minOperations(4))
+print(minOperations(12))  # Output: 6
