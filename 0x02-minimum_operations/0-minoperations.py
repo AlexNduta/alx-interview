@@ -2,7 +2,7 @@
 """ module doc"""
 
 
-    def minOperations(n):
+def minOperations(n):
     """" function documetation """
     if n == 1:
         return 0
